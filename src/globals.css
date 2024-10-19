@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap");
+@font-face {
+  font-family: "GeistVF";
+  src: url("/font/GeistVF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --container: #f3f4f6;
+  --background: #336bfe;
+  --foreground: #4b5563;
+}
+
+.dark {
+  --container: #09090b;
+  --background: #27272a;
+  --foreground: #a1a1aa;
+}
+
+.brygada-1918 {
+  font-family: "Brygada 1918", serif;
+}
+
+i {
+  color: black;
+  font-style: italic;
+}
+
+.dark i {
+  color: white;
+  font-style: italic;
+}
+
+::-webkit-scrollbar {
+  background: #f3f4f6;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #336bfe;
+  border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar {
+  background: #09090b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
