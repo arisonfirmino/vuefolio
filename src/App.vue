@@ -1,7 +1,10 @@
 <template>
   <Header />
-  <div class="w-full max-w-3xl space-y-20 px-5 pb-5 pt-40 lg:px-0">
+  <div
+    class="w-full max-w-3xl space-y-20 overflow-hidden px-5 pb-5 pt-40 lg:px-0 xl:overflow-visible"
+  >
     <Introduce />
+    <Timeline />
     <About />
     <Projects />
     <Stack />
@@ -13,6 +16,7 @@
 <script setup>
 import Header from "@/components/Header/Header.vue";
 import Introduce from "@/components/Introduce/Introduce.vue";
+import Timeline from "@/components/Timeline/Timeline.vue";
 import About from "@/components/About/About.vue";
 import Projects from "@/components/Projects/Projects.vue";
 import Stack from "@/components/Stack/Stack.vue";

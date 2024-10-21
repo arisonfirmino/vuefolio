@@ -59,8 +59,6 @@
 <script setup>
 import Title from "../Title.vue";
 import { ref, computed } from "vue";
-import { MoveRightIcon } from "lucide-vue-next";
-import Icon from "@/components/Icon.vue";
 import Search from "./Search.vue";
 
 const projects = ref([

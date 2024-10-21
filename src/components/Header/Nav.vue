@@ -8,7 +8,7 @@
           `flex h-10 w-10 items-center justify-center rounded-lg uppercase md:h-auto md:w-auto md:px-2.5 md:py-2`,
           currentSection === item.href.replace('#', '')
             ? 'bg-background text-white'
-            : 'text-black dark:text-white',
+            : 'text-foreground',
         ]"
       >
         <a :href="item.href" @click.prevent="setActive(item.href)" class="z-10">

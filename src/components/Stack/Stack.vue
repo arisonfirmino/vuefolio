@@ -39,7 +39,7 @@
 import Title from "@/components/Title.vue";
 import FrontendStack from "@/components/Stack/FrontendStack.vue";
 import BackendStack from "@/components/Stack/BackendStack.vue";
-import ActionButton from "@/components/Stack/ActionButton.vue";
+import ActionButton from "@/components/ActionButton.vue";
 import { ref } from "vue";
 import LibraryStack from "@/components/Stack/LibraryStack.vue";
 import ToolStack from "@/components/Stack/ToolStack.vue";

@@ -36,7 +36,13 @@
       </button>
     </div>
 
-    <div v-if="seeMore" class="space-y-5 text-foreground">
+    <div
+      v-if="seeMore"
+      v-motion
+      :initial="{ opacity: 0, y: 100 }"
+      :enter="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+      class="space-y-5 text-foreground"
+    >
       <p>
         Sempre me interessei por tecnologia e tudo que a envolve, mas foi
         recentemente que percebi que é nessa área que quero construir minha

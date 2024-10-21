@@ -1,26 +1,19 @@
 <template>
-  <div class="flex items-center justify-center">
+  <div
+    v-motion
+    :initial="{ opacity: 0, y: 100 }"
+    :enter="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+    class="flex items-center justify-center"
+  >
     <ul class="grid grid-cols-3 gap-5">
-      <li
-        v-for="skill in skills"
-        :key="skill.name"
-        class="group relative flex h-[90px] w-[90px] cursor-default flex-col items-center justify-center rounded-xl border border-solid border-black border-opacity-10 duration-500 hover:border-opacity-100 dark:border-white dark:border-opacity-10 dark:hover:border-opacity-100"
-      >
-        <span class="duration-500 group-hover:mb-6">
-          <Icon :name="skill.icon" />
-        </span>
-        <span
-          class="invisible absolute w-full truncate px-2.5 text-center text-xs group-hover:visible group-hover:mt-6 group-hover:duration-500"
-          >{{ skill.name }}</span
-        >
-      </li>
+      <Skill :skills="skills" />
     </ul>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Icon from "../Icon.vue";
+import Skill from "@/components/Stack/Skill.vue";
 
 const skills = ref([
   { name: "VS Code", icon: "vscode" },
