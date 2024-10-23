@@ -22,7 +22,9 @@
             <h3 class="text-lg font-bold">{{ project.title }}</h3>
           </div>
           <div class="px-5 pt-1">
-            <p class="text-sm text-foreground">{{ project.description }}</p>
+            <p class="text-sm lowercase text-foreground">
+              {{ project.description }}
+            </p>
           </div>
           <div
             class="flex gap-2.5 overflow-x-scroll px-5 py-2 [&::-webkit-scrollbar]:hidden"
@@ -78,51 +80,12 @@ const projects = ref([
     ],
   },
   {
-    title: "sendify",
+    title: "spotplayer",
     description:
-      "Aplicação web que permite enviar e receber e-mails via interface web.",
-    repo: "https://github.com/arisonfirmino/sendify",
-    deploy: "https://sendify-six.vercel.app",
-    tags: [
-      "typescript",
-      "nextjs",
-      "prisma",
-      "mongodb",
-      "tailwindcss",
-      "nextauth",
-    ],
-  },
-  {
-    title: "financial-control",
-    description:
-      "Uma aplicação web interativa projetada para otimizar a gestão das finanças pessoais.",
-    repo: "https://github.com/arisonfirmino/financial-control",
-    deploy: "https://financial-control-omega.vercel.app",
-    tags: [
-      "typescript",
-      "nextjs",
-      "prisma",
-      "postgresql",
-      "supabase",
-      "tailwindcss",
-      "nextauth",
-    ],
-  },
-  {
-    title: "task-hub",
-    description:
-      "Aplicação de gerenciamento de tarefas com interação de arrastar e soltar (drag and drop).",
-    repo: "https://github.com/arisonfirmino/task-hub",
-    deploy: "https://task-hub-lyart-phi.vercel.app",
-    tags: [
-      "typescript",
-      "nextjs",
-      "prisma",
-      "postgresql",
-      "supabase",
-      "tailwindcss",
-      "nextauth",
-    ],
+      "Player de música integrado com o Spotify que reproduz músicas via API.",
+    repo: "",
+    deploy: "",
+    tags: ["javascript", "react", "axios", "tailwindcss"],
   },
   {
     title: "the-burger-lab",
