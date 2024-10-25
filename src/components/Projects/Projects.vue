@@ -30,7 +30,7 @@
             class="flex gap-2.5 overflow-x-scroll px-5 py-2 [&::-webkit-scrollbar]:hidden"
           >
             <span
-              v-for="tag in project.tags"
+              v-for="tag in sortTags(project.tags)"
               :key="tag"
               class="rounded-full bg-gray-200 px-2.5 py-0.5 text-xs lowercase text-foreground dark:bg-background dark:text-white"
               >{{ tag }}</span
@@ -62,6 +62,8 @@
 import Title from "../Title.vue";
 import { ref, computed } from "vue";
 import Search from "./Search.vue";
+import { MoveRightIcon } from "lucide-vue-next";
+import { sortProjects, sortTags } from "@/helpers/sortHelpers.js";
 
 const projects = ref([
   {
@@ -80,11 +82,11 @@ const projects = ref([
     ],
   },
   {
-    title: "spotplayer",
+    title: "track-flow",
     description:
-      "Player de música integrado com o Spotify que reproduz músicas via API.",
-    repo: "",
-    deploy: "",
+      "Aplicação web que oferece uma experiência de player de música integrada com a API do Spotify.",
+    repo: "https://github.com/arisonfirmino/track-flow",
+    deploy: "https://arisonfirmino.github.io/track-flow",
     tags: ["javascript", "react", "axios", "tailwindcss"],
   },
   {
@@ -107,7 +109,7 @@ const projects = ref([
 const search = ref("");
 
 const filteredProjects = computed(() => {
-  return projects.value.filter((project) =>
+  return sortProjects(projects.value).filter((project) =>
     project.title.toLowerCase().includes(search.value.toLowerCase()),
   );
 });
