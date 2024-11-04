@@ -6,13 +6,7 @@
       :setShowComponent="setShowTimeline"
     />
 
-    <div
-      v-if="showTimeline"
-      v-motion
-      :initial="{ opacity: 0, y: 100 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="flex flex-col gap-5 md:flex-row md:gap-0"
-    >
+    <div v-if="showTimeline" class="flex flex-col gap-5 md:flex-row md:gap-0">
       <EducationTimeline />
       <ExperienceTimeline />
     </div>

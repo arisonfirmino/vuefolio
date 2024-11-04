@@ -2,7 +2,7 @@
   <section id="contact" class="space-y-5">
     <Title title="Contato" />
 
-    <p class="text-sm text-foreground">
+    <p data-aos="fade-right" class="text-sm text-foreground">
       Estou à disposição para conversar! Utilize o formulário para enviar um
       e-mail diretamente para mim, ou conecte-se através do WhatsApp, LinkedIn
       ou GitHub. Vamos conversar!
@@ -14,7 +14,9 @@
       />
       <ul class="z-10 flex gap-5 md:mr-5">
         <li
-          v-for="link in contactLinks"
+          v-for="(link, index) in contactLinks"
+          data-aos="zoom-in"
+          :data-aos-delay="index * 100"
           :key="link.name"
           class="border-oslid h-10 w-10 rounded-full border border-black border-opacity-10 bg-container text-foreground duration-500 hover:border-background hover:text-background dark:border-white dark:border-opacity-10 dark:hover:border-opacity-100 dark:hover:text-white"
         >

@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form data-aos="zoom-in">
     <input
       type="text"
       placeholder="Pesquise por um projeto"

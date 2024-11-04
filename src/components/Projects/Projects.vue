@@ -2,7 +2,7 @@
   <section id="projects" class="space-y-5">
     <Title title="Projetos" />
 
-    <p class="text-sm text-foreground">
+    <p data-aos="fade-right" class="text-sm text-foreground">
       Confira a lista dos
       <span class="text-black dark:text-white">{{ projects.length }}</span>
       principais projetos que venho desenvolvendo durante a minha jornada como
@@ -13,8 +13,9 @@
 
     <ul class="grid grid-cols-1 gap-5 md:grid-cols-2">
       <li
-        v-for="project in filteredProjects"
+        v-for="(project, index) in filteredProjects"
         :key="project.title"
+        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
         class="group relative rounded-lg border border-solid border-black border-opacity-10 duration-500 hover:scale-105 hover:border-opacity-100 hover:bg-white dark:border-white dark:border-opacity-10 dark:hover:border-opacity-100 dark:hover:bg-black"
       >
         <a :href="project.repo" target="_blank" rel="noreferrer">
@@ -59,19 +60,20 @@
 </template>
 
 <script setup>
-import Title from "../Title.vue";
+import Title from "@/components/Title.vue";
 import { ref, computed } from "vue";
-import Search from "./Search.vue";
+import Search from "@/components/Projects/Search.vue";
 import { MoveRightIcon } from "lucide-vue-next";
+import Icon from "@/components/Icon.vue";
 import { sortProjects, sortTags } from "@/helpers/sortHelpers.js";
 
 const projects = ref([
   {
-    title: "text.fy",
+    title: "chirp",
     description:
-      "Uma rede social onde você compartilha ideias e interage com uma comunidade online.",
-    repo: "https://github.com/arisonfirmino/text.fy",
-    deploy: "https://text-fy.vercel.app",
+      "Rede social dedicada à publicação de textos e interação com uma comunidade online.",
+    repo: "https://github.com/arisonfirmino/chirp",
+    deploy: "https://chirp-drab.vercel.app",
     tags: [
       "typescript",
       "nextjs",
@@ -90,16 +92,17 @@ const projects = ref([
     tags: ["javascript", "react", "axios", "tailwindcss"],
   },
   {
-    title: "the-burger-lab",
+    title: "credenly",
     description:
-      "Simula um cardápio digital de uma hamburgueria, permitindo pedidos diretos via aplicativo.",
-    repo: "https://github.com/arisonfirmino/the-burger-lab",
-    deploy: "https://the-burger-lab.vercel.app",
+      "Aplicação completa dedicada à autenticação, com um sistema robusto de login e cadastro.",
+    repo: "https://github.com/arisonfirmino/credenly",
+    deploy: "https://credenly.vercel.app",
     tags: [
       "typescript",
       "nextjs",
       "prisma",
-      "mongodb",
+      "postgresql",
+      "supabase",
       "tailwindcss",
       "nextauth",
     ],

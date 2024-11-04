@@ -2,6 +2,7 @@
   <form @submit.prevent="onSubmit" class="space-y-5">
     <div class="flex flex-col gap-5 md:flex-row">
       <FormInput
+        data-aos="fade-right"
         label="Nome completo"
         placeholder="Digite seu nome completo"
         v-model="state.name"
@@ -13,14 +14,16 @@
       />
 
       <FormInput
+        data-aos="fade-left"
         label="Email"
-        placeholder="Insira se endereço de e-mail"
+        placeholder="Insira seu endereço de e-mail"
         v-model="state.email"
         :error="v$.email.$error ? 'Por favor, insira um e-mail válido.' : ''"
       />
     </div>
 
     <FormTextarea
+      data-aos="zoom-in"
       rows="3"
       label="Mensagem"
       placeholder="Escreva sua mensagem aqui"
@@ -105,7 +108,6 @@ export default {
         emailjs
           .send(service_id, template_id, templateParams, public_id)
           .then(() => {
-            console.log("Formulário enviado com sucesso.");
             resetForm();
 
             submittedDate.value = new Date();

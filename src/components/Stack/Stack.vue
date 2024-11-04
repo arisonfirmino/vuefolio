@@ -2,7 +2,7 @@
   <section id="stack" class="space-y-5">
     <Title title="Stack" />
 
-    <p class="text-sm text-foreground">
+    <p data-aos="fade-right" class="text-sm text-foreground">
       Aqui estão as habilidades que desenvolvi na programação, incluindo
       linguagens, frameworks, bibliotecas e ferramentas. Explore para conhecer
       melhor meu conhecimento técnico.

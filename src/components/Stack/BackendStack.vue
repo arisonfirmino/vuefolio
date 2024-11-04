@@ -1,5 +1,5 @@
 <template>
-  <h3 class="text-lg font-medium uppercase">
+  <h3 data-aos="fade-right" class="text-lg font-medium uppercase">
     Habilidades em backend e banco de dados
   </h3>
 

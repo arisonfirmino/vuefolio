@@ -2,7 +2,7 @@
   <section id="about" class="space-y-5">
     <Title title="Sobre mim" />
 
-    <div class="space-y-5 text-foreground">
+    <div data-aos="fade-up" class="space-y-5 text-foreground">
       <p>
         Meu nome é <i>Arison Firmino</i>, tenho <i>23 anos</i> e sou um futuro
         desenvolvedor. Meu primeiro contato com a programação foi em 2023 e,
@@ -36,13 +36,7 @@
       </button>
     </div>
 
-    <div
-      v-if="seeMore"
-      v-motion
-      :initial="{ opacity: 0, y: 100 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="space-y-5 text-foreground"
-    >
+    <div v-if="seeMore" data-aos="fade-up" class="space-y-5 text-foreground">
       <p>
         Sempre me interessei por tecnologia e tudo que a envolve, mas foi
         recentemente que percebi que é nessa área que quero construir minha

@@ -10,10 +10,10 @@
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
       :class="[
-        `border-b border-solid border-opacity-10 bg-transparent p-2.5 outline-none`,
+        `border-b border-solid bg-transparent p-2.5 outline-none`,
         error
-          ? 'border-red-600 dark:border-opacity-100'
-          : 'border-black focus:border-background dark:border-white dark:border-opacity-10 dark:focus:border-opacity-100',
+          ? 'border-red-600 border-opacity-100 dark:border-opacity-100'
+          : 'border-black border-opacity-10 focus:border-background dark:border-white dark:border-opacity-10 dark:focus:border-opacity-100',
       ]"
     />
     <small v-if="error" class="ml-1 mt-1 text-red-600">{{ error }}</small>

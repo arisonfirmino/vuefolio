@@ -1,6 +1,7 @@
 <template>
   <button
     @click="setShowComponent"
+    data-aos="zoom-in"
     :class="[
       `flex w-full items-center justify-between border-b border-solid border-black p-2.5 uppercase dark:border-white`,
       showComponent

@@ -1,5 +1,7 @@
 <template>
-  <h3 class="text-lg font-medium uppercase">Habilidades em frontend</h3>
+  <h3 data-aos="fade-right" class="text-lg font-medium uppercase">
+    Habilidades em frontend
+  </h3>
 
   <div class="flex items-center justify-center">
     <ul class="grid grid-cols-3 gap-5 md:grid-cols-7">
