@@ -107,6 +107,23 @@ const projects = ref([
       "nextauth",
     ],
   },
+  {
+    title: "smart-finance-calculator",
+    description:
+      "Calculadora inteligente que calcula despesas e receitas conforme os gastos e ganhos do usuário.",
+    repo: "https://github.com/arisonfirmino/smart-finance-calculator",
+    deploy: "https://smart-finance-calculator.vercel.app",
+    tags: [
+      "typescript",
+      "nextjs",
+      "prisma",
+      "postgresql",
+      "supabase",
+      "tailwindcss",
+      "nextauth",
+      "shadcn",
+    ],
+  },
 ]);
 
 const search = ref("");
