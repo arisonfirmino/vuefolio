@@ -1,17 +1,17 @@
 <template>
   <nav>
-    <ul class="flex gap-5">
+    <ul class="flex gap-10">
       <li
         v-for="item in menu"
         :key="item.title"
         :class="[
-          `flex h-10 w-10 items-center justify-center rounded-lg uppercase md:h-auto md:w-auto md:px-2.5 md:py-2`,
+          'jetbrains-mono text-sm uppercase',
           currentSection === item.href.replace('#', '')
-            ? 'bg-background text-white'
+            ? 'animate-jump text-black animate-duration-500 dark:text-white'
             : 'text-foreground',
         ]"
       >
-        <a :href="item.href" @click.prevent="setActive(item.href)" class="z-10">
+        <a :href="item.href" @click.prevent="setActive(item.href)">
           <component :is="item.icon" size="20" class="md:hidden" />
           <span class="hidden md:block"> {{ item.title }}</span>
         </a>
@@ -21,6 +21,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
+
 import {
   BriefcaseIcon,
   HomeIcon,
@@ -28,7 +30,6 @@ import {
   MessagesSquareIcon,
   UserIcon,
 } from "lucide-vue-next";
-import { ref, onMounted } from "vue";
 
 const menu = ref([
   { title: "Home", icon: HomeIcon, href: "#home" },
@@ -38,11 +39,10 @@ const menu = ref([
   { title: "Contato", icon: MessagesSquareIcon, href: "#contact" },
 ]);
 
-const active = ref("#home");
 const currentSection = ref("home");
 
 const setActive = (href) => {
-  active.value = href;
+  currentSection.value = href.replace("#", "");
   scrollToSection(href);
 };
 
@@ -69,9 +69,7 @@ onMounted(() => {
         }
       });
     },
-    {
-      threshold: 0.5,
-    },
+    { threshold: 0.5 },
   );
 
   document.querySelectorAll("section").forEach((section) => {

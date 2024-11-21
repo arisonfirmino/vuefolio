@@ -1,34 +1,24 @@
 <template>
-  <button
-    @click="handleClick"
-    :class="[
-      `absolute right-5 flex h-10 w-10 items-center justify-center rounded-lg bg-background text-white animate-duration-1000`,
-      animate ? 'animate-jump' : '',
-    ]"
-  >
-    <component :is="isDark ? MoonIcon : SunIcon" color="white" size="20" />
+  <button @click="toggleDark()" class="text-black dark:text-white">
+    <component
+      :is="isDark ? MoonIcon : SunIcon"
+      color="currentColor"
+      size="14"
+    />
   </button>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { SunIcon, MoonIcon } from "lucide-vue-next";
+import { watch } from "vue";
+
 import { useDark, useToggle } from "@vueuse/core";
+
+import { SunIcon, MoonIcon } from "lucide-vue-next";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
-const animate = ref(false);
-
-const setAnimate = () => {
-  animate.value = true;
-  setTimeout(() => {
-    animate.value = false;
-  }, 1000);
-};
-
-const handleClick = () => {
-  toggleDark();
-  setAnimate();
-};
+watch(isDark, (newValue) => {
+  document.body.classList.toggle("dark", newValue);
+});
 </script>

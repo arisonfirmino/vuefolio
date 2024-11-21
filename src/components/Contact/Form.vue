@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="onSubmit" class="space-y-5">
+  <form @submit.prevent="onSubmit" class="space-y-5 text-sm">
     <div class="flex flex-col gap-5 md:flex-row">
       <FormInput
         data-aos="fade-right"
@@ -22,6 +22,18 @@
       />
     </div>
 
+    <FormInput
+      data-aos="zoom-in"
+      label="Assunto"
+      placeholder="Insira o assunto da mensagem"
+      v-model="state.subject"
+      :error="
+        v$.subject.$error
+          ? 'Este campo é obrigatório e deve ter pelo menos 3 caracteres.'
+          : ''
+      "
+    />
+
     <FormTextarea
       data-aos="zoom-in"
       rows="3"
@@ -37,9 +49,9 @@
 
     <button
       type="submit"
-      class="flex w-full items-center justify-center gap-2.5 text-nowrap rounded-lg bg-background px-5 py-2 text-white active:bg-black dark:bg-white dark:text-black dark:active:bg-background dark:active:text-white md:w-fit"
+      class="jetbrains-mono flex w-full items-center justify-center gap-2.5 rounded-lg bg-background px-3 py-2.5 text-xs uppercase text-white active:bg-black dark:bg-white dark:text-black dark:active:bg-background dark:active:text-white md:w-fit md:justify-normal"
     >
-      <SendIcon size="16" />
+      <SendIcon size="12" />
       Enviar mensagem
     </button>
   </form>
@@ -49,8 +61,10 @@
 
 <script>
 import { reactive, computed, ref } from "vue";
+
 import useVuelidate from "@vuelidate/core";
 import { required, email, minLength } from "@vuelidate/validators";
+
 import emailjs from "emailjs-com";
 
 import FormInput from "@/components/Contact/FormInput.vue";
@@ -70,6 +84,7 @@ export default {
     const state = reactive({
       name: "",
       email: "",
+      subject: "",
       message: "",
     });
 
@@ -77,6 +92,7 @@ export default {
       return {
         name: { required, minLength: minLength(3) },
         email: { required, email },
+        subject: { required, minLength: minLength(3) },
         message: { required, minLength: minLength(3) },
       };
     });
@@ -89,6 +105,7 @@ export default {
     const resetForm = () => {
       state.name = "";
       state.email = "";
+      state.subject = "";
       state.message = "";
     };
 
@@ -102,6 +119,7 @@ export default {
         const templateParams = {
           name: state.name,
           email: state.email,
+          subject: state.subject,
           message: state.message,
         };
 

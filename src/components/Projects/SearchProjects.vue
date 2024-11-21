@@ -12,9 +12,9 @@
 <script setup>
 import { defineEmits } from "vue";
 
-const emit = defineEmits(["update-search"]);
+const emit = defineEmits(["handleSearchUpdate"]);
 
 const onInput = (event) => {
-  emit("update-search", event.target.value);
+  emit("handleSearchUpdate", event.target.value);
 };
 </script>
