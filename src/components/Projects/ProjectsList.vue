@@ -30,11 +30,11 @@ import { sortProjects } from "@/helpers/sortHelpers.js";
 
 const projectList = ref([
   {
-    title: "cine-reserve",
+    title: "coders-hub",
     description:
-      "Aplicação full-stack para reserva de assentos em cinemas, com exibição de sessões fictícias.",
-    repo: "https://github.com/arisonfirmino/cine-reserve",
-    deploy: "https://cine-reserve.vercel.app",
+      "Rede social para devs compartilharem projetos e interagirem com uma comunidade online.",
+    repo: "https://github.com/arisonfirmino/coders-hub",
+    deploy: "https://coders-hub-ecru.vercel.app",
     tags: [
       "typescript",
       "nextjs",
