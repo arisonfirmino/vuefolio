@@ -1,6 +1,6 @@
 <template>
   <div data-aos="fade-left" class="flex items-center justify-between">
-    <div class="flex items-center gap-2.5">
+    <div class="hidden items-center gap-2.5 md:flex">
       <a
         href="mailto:arisonfirmino.dev@gmail.com"
         target="_blank"
