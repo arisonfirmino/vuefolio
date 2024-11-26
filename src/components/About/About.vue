@@ -4,25 +4,35 @@
 
     <div data-aos="fade-up" class="space-y-5 text-foreground">
       <p>
-        Meu nome é <i>Arison Firmino</i>, tenho <i>23 anos</i> e sou um futuro
-        desenvolvedor. Meu primeiro contato com a programação foi em 2023 e,
-        desde então, venho me dedicando aos estudos de forma autodidata. Ao
-        longo desse período, me aprofundei no desenvolvimento fullstack,
-        adquirindo habilidades tanto no frontend, com <i>HTML</i>, <i>CSS</i>,
-        <i>JavaScript</i> e <i>TypeScript</i>, quanto no backend, utilizando
-        <i>Node.js</i> e bancos de dados relacionais, como <i>PostgreSQL</i>, e
-        não relacionais, como <i>MongoDB</i>.
+        Meu nome é <i>Arison Firmino</i>, tenho <i>23 anos</i> e sou apaixonado
+        por tecnologia. Minha jornada na programação começou como uma simples
+        curiosidade, que rapidamente se transformou em algo maior: um propósito.
       </p>
       <p>
-        Também me concentrei em frameworks como <i>ReactJS</i> e <i>Next.js</i>,
-        que tenho utilizado no desenvolvimento dos meus projetos devido à sua
-        facilidade de uso e versatilidade. Esses frameworks tem sido fundamental
-        para o meu aprendizado e crescimento na área.
+        Iniciei essa jornada em 2023, com estudos autodidatas, aprendendo o
+        básico de <i>HTML</i>, <i>CSS</i> e <i>JavaScript</i>. Com o passar do
+        tempo e o avanço dos estudos, fui me conectando cada vez mais com o
+        mundo do desenvolvimento web. Cada linha de código que escrevia não era
+        apenas aprendizado, mas um passo em direção ao meu objetivo de criar
+        soluções que realmente façam a diferença.
       </p>
       <p>
-        Atualmente, estou em busca da minha primeira oportunidade na área de
-        programação, onde possa aprender, crescer e dar início à minha carreira
-        profissional.
+        À medida que evoluía, naturalmente comecei a explorar frameworks como o
+        <i>ReactJS</i>, que abriram ainda mais possibilidades para transformar
+        ideias em realidade. Hoje, minha base de aprendizado está focada no
+        desenvolvimento web <i>full stack</i>, e meus projetos são desenvolvidos
+        principalmente com <i>Next.js</i> e <i>TypeScript</i>. O desenvolvimento
+        <i>full stack</i> me encanta por unir o backend ao frontend, permitindo
+        que ambos trabalhem em harmonia. Ver tudo funcionando perfeitamente como
+        um único sistema integrado traz uma sensação de realização e orgulho
+        pelo trabalho realizado.
+      </p>
+
+      <p>
+        Atualmente, estou iniciando minha graduação em
+        <i>Ciência da Computação</i> e buscando minha primeira oportunidade para
+        atuar na área de tecnologia. Quero um ambiente onde possa aprender,
+        evoluir e dar início oficial à minha carreira profissional.
       </p>
     </div>
 
@@ -38,28 +48,22 @@
 
     <div v-if="seeMore" data-aos="fade-up" class="space-y-5 text-foreground">
       <p>
-        Sempre me interessei por tecnologia e tudo que a envolve, mas foi
-        recentemente que percebi que é nessa área que quero construir minha
-        carreira profissional. A programação me mostrou que posso transformar
-        ideias em soluções reais. Esse poder de inovação e a constante evolução
-        tecnológica me motivam a continuar aprendendo e desenvolvendo minhas
-        habilidades, sempre buscando novos desafios.
+        Esse mundo surgiu para mim de forma inesperada, mas se tornou uma
+        paixão. Descobri que a tecnologia é uma ferramenta poderosa para
+        transformar ideias em realidade, esse poder de inovação e a constante
+        evolução tecnológica me motivam a continuar aprendendo e desenvolvendo
+        minhas habilidades, sempre buscando novos desafios.
       </p>
       <p>
-        Por agora, meus principais objetivos têm sido iniciar uma graduação na
-        área de programação e conquistar uma oportunidade de trabalho no mesmo
-        campo. Tenho buscado constantemente aprimorar minhas habilidades
-        técnicas e, ao longo desse processo, percebi que vários aspectos da
-        programação, como a capacidade de resolver problemas e a adaptabilidade,
-        também têm contribuído para o meu desenvolvimento pessoal.
+        Meu objetivo é evoluir constantemente como desenvolvedor, expandindo
+        minhas habilidades e conhecimentos para alcançar novos patamares na área
+        de tecnologia. No futuro, quero trabalhar em projetos que impactem
+        positivamente as pessoas, e quem sabe, liderar algo que inspire outros
+        desenvolvedores.
       </p>
       <p>
-        Meus conhecimentos e habilidades hoje são fruto dos projetos pessoais
-        que desenvolvi desde que comecei a estudar programação. Esse processo me
-        permitiu aprender muito em um curto período de tempo, e continuo a
-        evoluir constantemente. Estou satisfeito com o progresso que alcancei
-        até aqui, mas sigo sempre em busca de novos desafios que me permitam
-        expandir ainda mais meus conhecimentos e habilidades.
+        Acredito que aprendizado e evolução são contínuos, e estou animado com
+        as possibilidades que o futuro reserva.
       </p>
     </div>
   </section>

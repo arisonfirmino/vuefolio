@@ -12,7 +12,7 @@
         {{ introText }}
       </h2>
 
-      <p data-aos="fade-left" class="text-foreground">
+      <p data-aos="fade-left" class="text-sm text-foreground">
         {{ bioText }}
       </p>
     </div>
@@ -49,10 +49,10 @@ import ResumeLink from "@/components/Introduce/ResumeLink.vue";
 import { SquareArrowOutUpRight } from "lucide-vue-next";
 
 const introText =
-  "Embarcando em uma jornada na programação, buscando transformar ideias em soluções práticas.";
+  "Explorando o universo da programação, com o propósito de transformar ideias em soluções reais e impactantes.";
 
 const bioText =
-  "Me chamo Arison, estou começando na programação e buscando oportunidades para aprender e crescer. Explore meu portfólio para conhecer meus projetos e habilidades.";
+  "Olá! Sou Arison, apaixonado por tecnologia e iniciando minha jornada na programação. Busco oportunidades para aprender, evoluir e construir uma carreira sólida. Explore meu portfólio e conheça meus projetos!";
 
 const externalLinks = ref([
   { name: "LinkedIn", href: "https://www.linkedin.com/in/arisonfirmino" },
