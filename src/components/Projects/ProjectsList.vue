@@ -85,6 +85,21 @@ const projectList = ref([
       "shadcn",
     ],
   },
+  {
+    title: "taskify",
+    description:
+      "Aplicação de gestão de tarefas com armazenamento em banco de dados e autenticação via NextAuth.",
+    repo: "https://github.com/arisonfirmino/taskify",
+    deploy: "https://taskify-five-xi.vercel.app",
+    tags: [
+      "typescript",
+      "nextjs",
+      "prisma",
+      "mongodb",
+      "tailwindcss",
+      "nextauth",
+    ],
+  },
 ]);
 
 const search = ref("");
